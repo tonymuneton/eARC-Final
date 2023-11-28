@@ -16,6 +16,30 @@
 
 }
 
+/* Responsive styles for sidebar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        flex: 0 0 auto; /* Allow sidebar to adjust its width */
+        width: 100%; /* Full width on smaller screens */
+        margin-right: 0;
+        margin-left: 0;
+        padding: 15px; /* Reduced padding on smaller screens */
+        /* Other styles... */
+    }
+
+    /* Adjust font size for smaller screens */
+    .sidebar ul ul li {
+        font-size: 0.875em; /* Slightly smaller font size */
+    }
+
+    /* Hide arrows and other non-essential elements if needed */
+    .arrow {
+        display: none;
+    }
+
+    /* You might also want to toggle the display of .sidebar based on some user action like clicking a hamburger icon */
+}
+
 /* fixes over lapping issues between Section and submenu */
 .sidebar > ul > li > ul {
     padding-top: 0;
@@ -489,9 +513,54 @@ legend {
     font-size: 24px; /* Adjust the size as needed */
 }
 
-
 html, body {
 
 
     background-color: #fdfdfd; /* Even lighter, very close to white */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    form, fieldset {
+        padding: 10px; /* Reduced padding */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    /* Adjust form elements to be more responsive */
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%; /* Full width on smaller screens */
+        /* Other styles... */
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    /* Convert sidebar to a toggle menu on small screens */
+    .sidebar {
+        position: absolute; /* or 'fixed' depending on your layout */
+        width: 250px; /* Adjust as necessary */
+        height: 100%;
+        left: -250px; /* Hide off-screen */
+        transition: left 0.3s;
+    }
+
+    /* Styles for when sidebar is active */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Style your menu toggle button */
+    .menu-toggle {
+        display: block;
+        /* Other styles as necessary */
+    }
+}
+
+/* Phone and below */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Full width on very small screens */
+    }
 }
