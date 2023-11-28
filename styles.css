@@ -171,7 +171,7 @@ nav a:hover {
 
 .icon-button-book {
     margin-left: 100px;  
-    font-family: Futura Medium;   
+    font-family: 'Futura Medium';   
     text-decoration: none; /* Removes underline */
     color: inherit; /* Inherits the color from its parent */
 }
