@@ -537,24 +537,22 @@ html, body {
 
 /* Tablet and below */
 @media (max-width: 768px) {
-    /* Convert sidebar to a toggle menu on small screens */
     .sidebar {
-        position: absolute; /* or 'fixed' depending on your layout */
-        width: 250px; /* Adjust as necessary */
-        height: 100%;
-        left: -250px; /* Hide off-screen */
-        transition: left 0.3s;
+        flex: 0 0 auto; /* Allow sidebar to adjust its width */
+        width: 100%; /* Full width on smaller screens */
+        margin: 0;
+        padding: 15px; /* Reduced padding on smaller screens */
+        /* Ensure sidebar is visible or provide a toggle mechanism */
     }
 
-    /* Styles for when sidebar is active */
-    .sidebar.active {
-        left: 0;
+    /* Hide arrows and other non-essential elements if needed */
+    .arrow {
+        display: none;
     }
 
-    /* Style your menu toggle button */
-    .menu-toggle {
-        display: block;
-        /* Other styles as necessary */
+    /* Adjust font size for smaller screens */
+    .sidebar ul ul li {
+        font-size: 0.875em; /* Slightly smaller font size */
     }
 }
 
@@ -562,5 +560,6 @@ html, body {
 @media (max-width: 480px) {
     .sidebar {
         width: 100%; /* Full width on very small screens */
+        /* Ensure sidebar is visible or provide a toggle mechanism */
     }
 }
