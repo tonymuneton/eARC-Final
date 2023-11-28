@@ -1,0 +1,118 @@
+.scrollable-table-container {
+    max-height: 800px;
+    overflow-y: auto;
+    width: 75%;
+    margin: 150px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.H-resource {
+    text-align: center;
+    margin: 45px 0; /* Adjust the margin as needed */
+    position: relative; /* To control z-index */
+}
+.H-resource h1 {
+    background-color: #fff; /* To make the header stand out from the content */
+    padding: 20px; /* Add some padding for spacing */
+    position: absolute; /* Position the header relative to its container */
+    top: 0; /* Place the header at the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1; /* Ensure the header is on top of the content */
+}
+.resource-catalogue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Use 'separate' to handle borders for individual cells */
+    border-spacing: 0; /* Removes the spacing between borders */
+}
+
+th {
+    background-color: #FDD835; /* Yellow background for header */
+    color: #333; /* Dark gray text */
+    font-family: 'Futura', sans-serif;
+    padding: 12px 15px;
+    border-bottom: 2px solid #E0E0E0;
+    font-size: 15px;
+}
+
+td {
+    padding: 12px 15px;
+    color: #333;
+    border-bottom: 1px solid #E0E0E0;
+}
+th, td {
+    padding: 12px 15px; /* Adjust padding as needed */
+    text-align: left;
+    border-left: 1px solid #333; /* Adds a border to the left of each cell */
+    border-bottom: 1px solid #333; /* Keeps the existing bottom border */
+}
+
+/* You may also need to remove the border from the first cell of each row to prevent a double border where the table starts */
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+/* To prevent a double border on the right of the last cell, you can add this */
+th:last-child, td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #FAFAFA; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFF; /* White for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #FFF8E1; /* Light yellow for hover */
+}
+.download-button {
+    text-align: center;
+    margin: -90px 0;
+    margin-right: 1125px;
+
+}
+
+.download-button button {
+    background-color: #333; /* Dark gray color */
+    color: #fff; /* White text color */
+    padding: 20px 25px; /* Add padding to make the button more clickable */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    display: block; /* Make the button a block element to center it */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.download-button button:hover {
+    background-color: #555; /* Darker gray on hover */
+}
+
+/* Responsive table adjustments */
+@media screen and (max-width: 600px) {
+    .scrollable-table-container {
+        width: 95%;
+        margin: 50px auto;
+        max-height: none;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
